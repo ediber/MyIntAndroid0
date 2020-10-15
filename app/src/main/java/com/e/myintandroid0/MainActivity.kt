@@ -20,6 +20,9 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        Log.d("MainActivity", "onCreate")
+
         setContentView(R.layout.activity_main)
 
         val btn0 = findViewById<Button>(R.id.button0)
@@ -63,7 +66,22 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         })
 
-        //
 
     }
+
+
+    override fun onStart() {
+        super.onStart()
+
+        Log.d("MainActivity", "onStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        Log.d("MainActivity", "onResume")
+    }
+
+    // exercise 2
+    // write logs on all events of the 2 activities lifecycle
 }
