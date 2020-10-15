@@ -84,4 +84,22 @@ class MainActivity : AppCompatActivity() {
 
     // exercise 2
     // write logs on all events of the 2 activities lifecycle
+
+    override fun onPause() {
+        super.onPause()
+
+        Log.d("MainActivity", "onPause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+
+        Log.d("MainActivity", "onStop")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+
+        Log.d("MainActivity", "onDestroy")
+    }
 }
